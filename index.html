@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <nav class="bg-yellow-500 p-4 text-white flex justify-between items-center">
+        <h1 class="text-2xl">Pokémon Search</h1>
+        <div class="relative">
+            <button id="menu-button" class="bg-red-500 p-2 rounded">Menu</button>
+            <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-red-500 shadow-md rounded">
+                <ul class="py-1">
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-i">Generation 1</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-ii">Generation 2</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-iii">Generation 3</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-iv">Generation 4</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-v">Generation 5</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-vi">Generation 6</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-vii">Generation 7</button></li>
+                    <li><button class="w-full text-left px-4 py-2 hover:bg-gray-200" data-gen="generation-viii">Generation 8</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-4">
+        <div class="mb-4">
+            <input id="search-input" class="border p-2 w-full" type="text" placeholder="Search for a Pokémon">
+            <button id="search-button" class="bg-yellow-500 text-white p-2 mt-2 w-full sm:w-auto">Search</button>
+        </div>
+        <div id="pokemon-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
